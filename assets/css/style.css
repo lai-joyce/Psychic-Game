@@ -1,0 +1,16 @@
+body {
+	background: url('../images/Priekestolen.jpg');
+	background-size: 100%;
+}
+
+#game {
+	font-size: 24px;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 170px;
+}
+
+.title {
+	text-align: center;
+}
