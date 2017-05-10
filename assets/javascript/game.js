@@ -4,16 +4,18 @@ var letters = ["a", "b", "c"];
 	var guesses_left = 8;
 	var guesses_made = [];
 
-	document.onkeyup = function(event) {
+	
 
-
-		var playerGuess = String.fromCharCode(event.keyCode).toLowerCase();
-			
-			console.log(playerGuess);
-
-		var computerPick = letters[Math.floor(Math.random()*letters.length)];
+	var computerPick = letters[Math.floor(Math.random()*letters.length)];
 
 			console.log(computerPick);
+
+
+	document.onkeyup = function(event) {
+
+			var playerGuess = String.fromCharCode(event.keyCode).toLowerCase();
+			
+			console.log(playerGuess);
 
 			for (var i=0; i<guesses_made.length; i++) {
 				if (playerGuess === guesses_made[i]) {
