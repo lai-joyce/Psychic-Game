@@ -29,6 +29,7 @@ var letters = ["a", "b", "c"];
 				guesses_left = 8;
 				guesses_made = [];
 				alert("That's correct!");
+
 			}
 
 			if (playerGuess != computerPick) {
