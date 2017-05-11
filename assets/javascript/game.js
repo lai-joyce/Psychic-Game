@@ -3,6 +3,7 @@
 	var losses = 0;
 	var guesses_left = 8;
 	var guesses_made = [];
+	
 
 	
 	var computerPick;
@@ -40,25 +41,24 @@
 			
 			console.log(playerGuess);
 
-			for (var i=0; i<guesses_made.length; i++) {
-				if (playerGuess === guesses_made[i]) {
-				alert("You've already guessed that.");
-				}
-			}
+			
 
 
-			if (playerGuess === computerPick) {
+			if(playerGuess === computerPick) {
 				wins++;
 				alert("That's correct!");
 				resetGame();
 
-			}
-
-			else {
-				guesses_left -=1;
+			}else{
+				//only take away guess if user guess not in array 
+				if(guesses_made.indexOf(playerGuess) < 0){
+					guesses_left -=1;
+				}
+				
 				guesses_made.push(playerGuess);
 				console.log(guesses_made);
 			}
+
 
 			if (guesses_left === 0) {
 				alert("Incorrect.  You lose.  The letter was " + computerPick + ".");
