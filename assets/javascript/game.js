@@ -53,9 +53,10 @@
 				//only take away guess if user guess not in array 
 				if(guesses_made.indexOf(playerGuess) < 0){
 					guesses_left -=1;
+				guesses_made.push(playerGuess);
 				}
 				
-				guesses_made.push(playerGuess);
+				
 				console.log(guesses_made);
 			}
 
